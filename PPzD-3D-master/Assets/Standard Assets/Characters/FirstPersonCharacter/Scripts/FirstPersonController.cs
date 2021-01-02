@@ -32,6 +32,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
         [SerializeField, EventRef] private string footstepOutdoor;
         [SerializeField, EventRef] private string footstepIndoor;
+        [SerializeField, EventRef] private string runningOutdoor;
+        [SerializeField, EventRef] private string runningIndoor;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -173,22 +175,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 return;
             }
-            // pick & play a random footstep sound from the array,
-            // excluding sound at index 0
-            var foostepsClips = m_IsWalking ? m_FootstepSounds : runningFootsteps;
-            int n = Random.Range(1, foostepsClips.Length);
-            m_AudioSource.clip = foostepsClips[n];
+
             if (IsOutDoor)
             {
-                RuntimeManager.PlayOneShot(footstepOutdoor);
+                var activeFootsteps = m_IsWalking ? footstepOutdoor : runningOutdoor;
+                RuntimeManager.PlayOneShot(activeFootsteps);
             }
             else
             {
-                RuntimeManager.PlayOneShot(footstepIndoor);
+                var activeFootsteps = m_IsWalking ? footstepIndoor : runningIndoor;
+                RuntimeManager.PlayOneShot(activeFootsteps);
             }
-            // move picked sound to index 0 so it's not picked next time
-            foostepsClips[n] = foostepsClips[0];
-            foostepsClips[0] = m_AudioSource.clip;
         }
 
 

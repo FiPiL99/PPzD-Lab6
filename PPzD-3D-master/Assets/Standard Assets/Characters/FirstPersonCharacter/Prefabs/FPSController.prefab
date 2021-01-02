@@ -181,6 +181,8 @@ MonoBehaviour:
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   footstepOutdoor: event:/Player/Footstep Outdoor
   footstepIndoor: event:/Player/Footstep Indoor
+  runningOutdoor: event:/Player/Running Outdoor
+  runningIndoor: event:/Player/Running Indoor
 --- !u!54 &5400000
 Rigidbody:
   m_ObjectHideFlags: 0
