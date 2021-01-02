@@ -37,7 +37,7 @@ MonoBehaviour:
   Path: FMOD_Lab/Build/Desktop/Indoor.bank
   Name: Indoor
   StudioPath: bank:/Indoor
-  lastModified: 637451741788461431
+  lastModified: 637451747471156296
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: FMOD_Lab/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637451741788591149
+  lastModified: 637451747471285697
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -98,11 +98,11 @@ MonoBehaviour:
   Path: FMOD_Lab/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637451741788620797
+  lastModified: 637451747471335565
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 1338
+    Value: 1408
   Exists: 1
 --- !u!114 &-6666411352642975938
 MonoBehaviour:
@@ -119,7 +119,7 @@ MonoBehaviour:
   Path: FMOD_Lab/Build/Desktop/Player.bank
   Name: Player
   StudioPath: bank:/Player
-  lastModified: 637451741789728109
+  lastModified: 637451747472382770
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -207,10 +207,33 @@ MonoBehaviour:
   Path: FMOD_Lab/Build/Desktop/Door.bank
   Name: Door
   StudioPath: bank:/Door
-  lastModified: 637451741787607919
+  lastModified: 637451747470409333
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-323546041057751008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Jump
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Jump
+  guid: 541c0fe17c852141b91d16b6cf891feb
+  Banks:
+  - {fileID: -6666411352642975938}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,12 +261,14 @@ MonoBehaviour:
   - {fileID: -3104542919297204606}
   - {fileID: -4130907303112822766}
   - {fileID: 6623639092479855525}
+  - {fileID: -323546041057751008}
+  - {fileID: 1560634202698905541}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7163830094471531074}
   StringsBanks:
   - {fileID: -6727249799710898523}
-  stringsBankWriteTime: 637451741788620797
+  stringsBankWriteTime: 637451747471335565
   cacheVersion: 6
 --- !u!114 &351678133739444366
 MonoBehaviour:
@@ -267,6 +292,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 98168
+--- !u!114 &1560634202698905541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Land
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Land
+  guid: cb0a50f11425364e9e6f608951eb9613
+  Banks:
+  - {fileID: -6666411352642975938}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2066753441050032718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,7 +352,7 @@ MonoBehaviour:
   Path: FMOD_Lab/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637451741786700166
+  lastModified: 637451747469770911
   LoadResult: 0
   FileSizes: []
   Exists: 1

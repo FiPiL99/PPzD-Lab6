@@ -34,6 +34,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField, EventRef] private string footstepIndoor;
         [SerializeField, EventRef] private string runningOutdoor;
         [SerializeField, EventRef] private string runningIndoor;
+        [SerializeField, EventRef] private string jump;
+        [SerializeField, EventRef] private string landing;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -94,8 +96,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayLandingSound()
         {
-            m_AudioSource.clip = m_LandSound;
-            m_AudioSource.Play();
+            RuntimeManager.PlayOneShot(landing);
             m_NextStep = m_StepCycle + .5f;
         }
 
@@ -145,8 +146,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void PlayJumpSound()
         {
-            m_AudioSource.clip = m_JumpSound;
-            m_AudioSource.Play();
+            RuntimeManager.PlayOneShot(jump);
         }
 
 
